@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" />
+  <title>ReactJS</title>
+  <script
+    src="https://unpkg.com/react@18/umd/react.development.js"
+    crossorigin
+  ></script>
+  <script
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    crossorigin
+  ></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js" ></script>
+</html>
+<body>
+  <div id="output"></div>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    //Use babeljs to translate from JSX to ES5
+    const courses = [{ name: "react" }, { name: "angular" }, { name: "vue" }];
+    const jsx = (
+      <ul>
+        {courses.map((course, index) => 
+          <li key={index}>{course.name}</li>
+        )}
+      </ul>
+    );
+
+    //React@18
+    const container = document.getElementById("root");
+    const root = ReactDOM.createRoot(container);
+    root.render(jsx);
+  </script>
+</body>

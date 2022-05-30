@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" />
+  <title>ReactJS</title>
+  <script
+    src="https://unpkg.com/react@18/umd/react.development.js"
+    crossorigin
+  ></script>
+</html>
+<body>
+  <script>
+    //DOM
+    const ulDOM = document.createElement("ul");
+    const liDOM1 = document.createElement("li");
+    const liDOM2 = document.createElement("li");
+    liDOM1.innerText = "javascript";
+    liDOM2.innerText = "react";
+    ulDOM.appendChild(liDOM1);
+    ulDOM.appendChild(liDOM2);
+    ulDOM.id = 'ur-id'
+    ulDOM.style = 'color:red'
+    document.body.appendChild(ulDOM);
+
+    //REACT
+    //React.creteElement(type, props, children)
+    const ulReact = React.createElement(
+      "ul",
+      {
+          id: 'ul-id',
+          style: 'color:red'
+      },
+      React.createElement("li", null, "javascript"),
+      React.createElement("li", null, "reactjs")
+    );
+  </script>
+</body>

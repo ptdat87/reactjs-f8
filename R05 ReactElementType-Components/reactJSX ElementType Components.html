@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" />
+  <title>ReactJS</title>
+  <script
+    src="https://unpkg.com/react@18/umd/react.development.js"
+    crossorigin
+  ></script>
+  <script
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    crossorigin
+  ></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js" ></script>
+</html>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel">
+    //Use babeljs to translate from JSX to ES5
+    function Header(){
+      return(<div className = 'header'> Header</div>)
+    }
+
+    const app = (
+      <div className = 'wrapper'>
+        <Header/>
+      </div>
+    )
+
+    //React@18
+    const container = document.getElementById("app");
+    const root = ReactDOM.createRoot(container);
+    root.render(app);
+  </script>
+</body>
