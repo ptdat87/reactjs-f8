@@ -18,17 +18,23 @@
 
   <script type="text/babel">
     //PostItem.js
-    function PostItem() {
+    function PostItem({
+      image,
+      title,
+      description,
+      publishedAt,
+      callback = () => {},
+    }) {
+      callback()
+
       return (
         <div className="post-item">
           <label htmlFor="email">Email</label>
-          <input id="email"/>
-          <img
-            src="https://file1.dangcongsan.vn/data/0/images/2020/08/13/giangkpts/65th-vn-indo-standard-logo.jpg"
-            alt=""
-          />
-          <h2></h2>
-          <p></p>
+          <input id="email" />
+          <img src={image} alt={title} />
+          <h1 className="post-title">{title}</h1>
+          <p className="post-description">{description}</p>
+          <p className="post-publishedAt">{publishedAt}</p>
         </div>
       );
     }
@@ -37,7 +43,13 @@
     function App() {
       return (
         <div id="wrapper">
-          <PostItem />
+          <PostItem
+            title="React course"
+            image="http://ksit.com.vn/wp-content/uploads/2017/07/Home-icon.png"
+            description="You will have knowledge of react"
+            publishedAt="One day ago"
+            callback={()=>{}}
+          />
         </div>
       );
     }

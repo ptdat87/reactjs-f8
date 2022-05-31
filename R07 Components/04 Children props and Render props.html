@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" />
+  <title>ReactJS</title>
+  <script
+    src="https://unpkg.com/react@17/umd/react.development.js"
+    crossorigin
+  ></script>
+  <script
+    src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    crossorigin
+  ></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</html>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    //Input
+    function Input({ label, ...inputProps }) {
+      return (
+        <div>
+          <label>{label}</label>
+          <input {...inputProps} />
+        </div>
+      );
+    }
+    //Button
+    function Button({ children }) {
+      return <button>{children}</button>;
+    }
+    //List
+    function List({ data, children }) {
+      return <ul>{data.map((...props) => children(...props))}</ul>;
+    }
+    //Container
+    function App() {
+      const title = "Click me"; // change it Checkbox | Input
+const cars = ["BMW","Honda","Mazda"]
+
+      return (
+        <div id="wrapper">
+          <Input
+            label="Full Name"
+            type="text"
+            placeholder="enter full name"
+            onFocus={() => {
+              console.log(Math.random());
+            }}
+          />
+
+          <Button>Text from child</Button>
+          
+          <br/>
+          Not recommended:
+          <List data={cars}>{(item,index)=> <li key = {index}> {item}</li>}</List>
+        </div>
+      );
+    }
+
+    //index.js
+    ReactDOM.render(<App />, document.getElementById("root"));
+  </script>
+</body>

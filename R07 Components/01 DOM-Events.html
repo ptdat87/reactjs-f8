@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" />
+  <title>ReactJS</title>
+  <script
+    src="https://unpkg.com/react@17/umd/react.development.js"
+    crossorigin
+  ></script>
+  <script
+    src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    crossorigin
+  ></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</html>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function App() {
+      return (
+        <div id="wrapper">
+          <button onClick={(event) => console.log(event)}>Click me</button>
+        </div>
+      );
+    }
+    //index.js
+    ReactDOM.render(<App />, document.getElementById("root"));
+  </script>
+</body>
