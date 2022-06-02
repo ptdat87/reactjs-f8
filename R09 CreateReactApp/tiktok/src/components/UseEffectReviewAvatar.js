@@ -25,7 +25,7 @@ function UseEffectReviewAvatar() {
                 onChange={handlePreviewAvatar}
             />
             {avatar && (
-                <img src={avatar.preview} alt="" width="50%" />
+                <img src={avatar.preview} alt="" width="51%" />
             )}
         </div>)
 };
