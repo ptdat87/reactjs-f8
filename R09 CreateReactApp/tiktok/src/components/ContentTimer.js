@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-const tabs = ['posts', 'comments', 'albums']
 
 function ContentTime() {
     const [countDown, setCountDown] = useState(180)

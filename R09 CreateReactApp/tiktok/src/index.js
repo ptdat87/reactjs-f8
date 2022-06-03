@@ -4,7 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//Fake event comments
+function emitComment(id){
+  setInterval(()=> {
+    const content =`Comment content ${ Math.random()} of lession ${id}`;
+    // console.log(content);
+    window.dispatchEvent(
+      new CustomEvent(`lession-${id}`, {
+        detail: content
+      })
+    )
+  },2000)
+}
+emitComment(1)
+emitComment(2)
+emitComment(3)
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   // <React.StrictMode>
     <App />
