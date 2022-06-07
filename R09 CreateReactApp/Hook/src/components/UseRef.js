@@ -15,9 +15,9 @@ function UseRef() {
         prevCount.current = count
     }, [count])
 
-    useEffect(()=>{
+    useEffect(() => {
         const rect = h1Ref.current.getBoundingClientRect();
-        console.dir(h1Ref.current)
+        console.dir(rect)
     })
 
     const handleStart = () => {

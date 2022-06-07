@@ -16,6 +16,8 @@ import UseReducer from './components/UseReducer';
 import UseReducerTodo from './components/UseReducerTodo';
 import UseContext from './components/UseContext/useContext';
 import { ThemeProvider } from './components/UseContext/ThemeContext';
+import UseImperativeHandle from './videos/UseImperativeHandle';
+import AppRouter from './components/Router/AppRouter';
 
 
 
@@ -41,7 +43,8 @@ function App() {
       {/* {show&&<UseReducer/>} */}
       {/* {show && <UseReducerTodo />} */}
       {/* {show && <ThemeProvider><UseContext /></ThemeProvider>} */}
-
+      {/* {show && <UseImperativeHandle />} */}
+      {show && <AppRouter />}
     </Fragment>
   );
 }
