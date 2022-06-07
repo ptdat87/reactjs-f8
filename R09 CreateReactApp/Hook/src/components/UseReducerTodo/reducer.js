@@ -12,7 +12,7 @@ const reduce = (state, action) => {
     console.log('Action: ', action)
     console.log('Prev state: ', state)
     let newState
-
+    
     switch (action.type) {
         case SET_JOB:
             newState = {
