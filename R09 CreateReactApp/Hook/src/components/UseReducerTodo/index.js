@@ -1,6 +1,6 @@
 import { useReducer, useRef } from "react"
 import { addJob, deleteJob, setJob } from "./action"
-//TODO: import reduce, { initState } from "./reducer"
+import reduce, { initState } from "./reducer"
 
 
 //useReducer
