@@ -249,7 +249,7 @@
     function PostItem({ course, onClick }) {
       return (
         <div>
-          <h1 onClick={()=>onClick(course)}>{course.title}</h1>
+          <h1 onClick={() => onClick(course)}>{course.title}</h1>
           <img src={course.image_url} alt={course.title} />
           <p>{course.description}</p>
           <p>{course.published_at}</p>
@@ -259,8 +259,8 @@
 
     //Container
     function App() {
-      const handlerOnclick = course => {
-        console.log(course.title)
+      const handlerOnclick = (course) => {
+        console.log(course.title);
       };
 
       return (

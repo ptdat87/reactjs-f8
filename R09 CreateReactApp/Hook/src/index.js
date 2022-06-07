@@ -3,18 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { StoreProvider } from './components/UseContextTodo';
+import UseContextTodo from './components/UseContextTodo/UseContextTodo';
 
 //Fake event comments
-function emitComment(id){
-  setInterval(()=> {
-    const content =`Comment content ${ Math.random()} of lession ${id}`;
+function emitComment(id) {
+  setInterval(() => {
+    const content = `Comment content ${Math.random()} of lession ${id}`;
     // console.log(content);
     window.dispatchEvent(
       new CustomEvent(`lession-${id}`, {
         detail: content
       })
     )
-  },2000)
+  }, 2000)
 }
 emitComment(1)
 emitComment(2)
@@ -24,8 +26,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   // <React.StrictMode>
-    <App />
+  // <App />
   /* </React.StrictMode> */
+
+  <StoreProvider>
+    <UseContextTodo />
+  </StoreProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Content from './Content';
 import ContentTime from './ContentTimer';
 
 function UseEffect() {
@@ -9,7 +8,7 @@ function UseEffect() {
     <div>
       <button onClick={() => setShow(!show)}>toggle</button>
       {/* {show && <Content />} */}
-      {show && <ContentTime/>}
+      {show && <ContentTime />}
     </div>
 
   );

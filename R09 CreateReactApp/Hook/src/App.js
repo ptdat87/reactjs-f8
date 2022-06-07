@@ -14,9 +14,11 @@ import UseCallback from './components/UseCallback';
 import UseMemo from './components/UseMemo';
 import UseReducer from './components/UseReducer';
 import UseReducerTodo from './components/UseReducerTodo';
+import UseContext from './components/UseContext/useContext';
+import { ThemeProvider } from './components/UseContext/ThemeContext';
 
 
-const orders = [100, 200, 300]
+
 
 function App() {
   const [show, setShow] = useState(false)
@@ -28,7 +30,7 @@ function App() {
       {/* <StateTwoWayBinding/> */}
       {/* <ToDoList/> */}
       {/* <UseEffect/> */}
-      <button onClick={() => setShow(!show)}>toggle</button>
+      <button onClick={() => setShow(!show)}>Toggle</button>
       {/* {show && <UseEffectReviewAvatar/>} */}
       {/* {show && <UseEffectFakeChat/>} */}
       {/* {show && <UseLayoutEffect />} */}
@@ -37,7 +39,9 @@ function App() {
       {/* {show && <UseCallback/>} */}
       {/* {show && <UseMemo/>} */}
       {/* {show&&<UseReducer/>} */}
-      {show && <UseReducerTodo/>}
+      {/* {show && <UseReducerTodo />} */}
+      {/* {show && <ThemeProvider><UseContext /></ThemeProvider>} */}
+
     </Fragment>
   );
 }
