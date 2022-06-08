@@ -1,12 +1,19 @@
-import Heading from "./Heading";
-import Paragraph from "./Paragraph";
+import GlobalStyles from "./GlobalStyles";
+import Heading from "./Heading/index";
+import Paragraph from "./Paragraph/index";
 
 function AppCssModule() {
   return (
-    <div style={{ padding: "0 32px" }}>
-      <Heading />
-      <Paragraph />
-    </div>
+    <GlobalStyles>
+      <div style={{ padding: "0 32px" }}>
+        <Heading />
+        <Paragraph />
+      </div>
+      <div className="d-flex">
+        <div>Item 1</div>
+        <div>Item 2</div>
+      </div>
+    </GlobalStyles>
   );
 }
 

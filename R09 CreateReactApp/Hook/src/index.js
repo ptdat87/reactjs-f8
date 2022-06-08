@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom'
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { StoreProvider } from './components/UseContextTodo';
-import UseContextTodo from './components/UseContextTodo/UseContextTodo';
-import AppRouter from './components/Router/AppRouter';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { StoreProvider } from "./components/UseContextTodo";
+import UseContextTodo from "./components/UseContextTodo/UseContextTodo";
+import AppRouter from "./components/Router/AppRouter";
 
 //Fake event comments
 function emitComment(id) {
@@ -15,26 +15,25 @@ function emitComment(id) {
     // console.log(content);
     window.dispatchEvent(
       new CustomEvent(`lession-${id}`, {
-        detail: content
+        detail: content,
       })
-    )
-  }, 2000)
+    );
+  }, 2000);
 }
-emitComment(1)
-emitComment(2)
-emitComment(3)
+emitComment(1);
+emitComment(2);
+emitComment(3);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  // <React.StrictMode>
-  //     <App />
-  // </React.StrictMode>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 
-  <Router>
-    <AppRouter />
-  </Router>
-
+  // <Router>
+  //   <AppRouter />
+  // </Router>
 
   // <StoreProvider>
   //   <UseContextTodo />
