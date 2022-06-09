@@ -19,6 +19,8 @@ import { ThemeProvider } from "./components/UseContext/ThemeContext";
 import UseImperativeHandle from "./videos/UseImperativeHandle";
 import AppRouter from "./components/Router/AppRouter";
 import AppCssModule from "./components/CSSModule/AppCssModule";
+import Button from "./components/clsx/Button";
+import SCSSButton from "./components/SCSSButton";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -43,7 +45,9 @@ function App() {
       {/* {show && <ThemeProvider><UseContext /></ThemeProvider>} */}
       {/* {show && <UseImperativeHandle />} */}
       {/* {show && <AppRouter />} */}
-      {show && <AppCssModule />}
+      {/* {show && <AppCssModule />} */}
+      {/* {show && <Button primary />} */}
+      {show && <SCSSButton primary />}
     </Fragment>
   );
 }
